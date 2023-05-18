@@ -1,5 +1,59 @@
 from dijkstra import Grafo
 import os
+import threading
+import pygame
+from PIL import Image
+
+def show_window(image_path, exit_event):
+    # Carrega a imagem
+    image = Image.open(image_path)
+    image = image.convert("RGB")
+
+    # Obtém as dimensões da imagem
+    image_width, image_height = image.size
+
+    # Inicializa o Pygame
+    pygame.init()
+
+    # Cria a janela
+    window = pygame.display.set_mode((image_width, image_height))
+    pygame.display.set_caption("Janela da Imagem")
+
+    # Carrega a imagem no formato do Pygame
+    pygame_image = pygame.image.load(image_path)
+
+    # Exibe a imagem na janela
+    window.blit(pygame_image, (0, 0))
+    pygame.display.flip()
+
+    # Loop principal do Pygame
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+        if exit_event.is_set():
+            running = False
+
+    # Encerra o Pygame
+    pygame.quit()
+
+def run_code(image_path):
+    show_window(image_path)
+
+exit_event = threading.Event()
+
+# Função para executar o código do Pygame
+def run_code(image_path, exit_event):
+    show_window(image_path, exit_event)
+
+# Caminho da imagem
+image_path = "./mapa.png"
+
+# Cria uma thread para executar o código do Pygame
+pygame_thread = threading.Thread(target=run_code, args=(image_path, exit_event))
+pygame_thread.start()
 
 def limpar_terminal():
     if os.name == 'nt':  # Windows
@@ -76,5 +130,7 @@ while True:
     saida = input("\nDeseja sair (S/N)?: ")
     limpar_terminal()
     if saida.lower() == "s" :
+        exit_event.set()
         break
 
+pygame_thread.join()
