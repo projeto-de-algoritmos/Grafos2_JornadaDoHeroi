@@ -45,23 +45,31 @@ grafo.adicionar_aresta('Ironhold', 'Celestia', 8)
 
 local_atual = 'Celestia'
 
-print("================================================================================================================================================================")
-print(f"Seja bem vindo, ó nobre herói! Eu sou seu parceiro de viagem, o mapa do Mago Dijkstra! meu objetivo é te ajudar e te dizer a menor distância\ne o caminho mais rápido até sua jornarda!")
+print("====================================================================================================================================================")
+print(f"Seja bem vindo, ó nobre herói! Eu sou seu parceiro de viagem, o mapa do Mago Dijkstra! meu objetivo é te ajudar e te dizer a menor distância\ne o caminho mais rápido até sua jornarda! Vamos sair de Celestia e começar nossa aventura!")
+print("====================================================================================================================================================")
 
 while True:
-    print(f"Você está em {local_atual}, para onde quer ir, nobre guerreiro?")
-    vertice_final = input('->Diga a cidade para onde vai: ')
+    print(f"\nVocê está em {local_atual}, para onde quer ir, nobre guerreiro?")
+    contador = 1
+    for vertice in grafo.graph:
+        print(f"{contador}.{vertice}")
+        contador = contador + 1
+    print("\n")
+
+    vertice_final = input('->Diga a cidade para onde nós vamos: ')
     
     menor_distancia, caminho = grafo.dijkstra(local_atual, vertice_final)
 
     if(menor_distancia == float('inf')):
-        print(f"\n-->Não há caminho entre {local_atual} e {vertice_final}.")
+        print(f"\n-->Não há caminho entre {local_atual} e {vertice_final}. Tente de novo!")
 
     else:
         local_atual = vertice_final
-        print(f"\n-->A menor distância entre {local_atual} e {vertice_final} é: {menor_distancia}Km.")
         caminho_formatado = ' -> '.join(caminho)
         print(caminho_formatado)
+        print(f"\n-->A menor distância entre {local_atual} e {vertice_final} é: {menor_distancia}Km. O caminho é {caminho_formatado}. Vamos lá!")
+        
 
     
    
