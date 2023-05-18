@@ -12,14 +12,28 @@ grafo = Grafo()
 grafo.adicionar_aresta('A', 'B', 2)
 grafo.adicionar_aresta('A', 'C', 4)
 grafo.adicionar_aresta('B', 'C', 3)
+grafo.adicionar_aresta('D', 'E', 3)
 
-vertice_inicial = 'A'
-vertice_final = 'C'
-menor_distancia = grafo.dijkstra(vertice_inicial, vertice_final)
+while True:
+    vertice_inicial = input('\n\n->Diga a cidade em que está: ')
+    
 
-print(f"A menor distância entre '{vertice_inicial}' e '{vertice_final}' é: {menor_distancia}")
+    vertice_final = input('->Diga a cidade para onde vai: ')
 
+    
 
+    menor_distancia = grafo.dijkstra(vertice_inicial, vertice_final)
+
+    if(menor_distancia == float('inf')):
+        print(f"\n-->Não há caminho entre {vertice_inicial} e {vertice_final}.")
+
+    else:
+        print(f"\n-->A menor distância entre {vertice_inicial} e {vertice_final} é: {menor_distancia}Km.")
+
+    saida = input("Deseja sair (S/N)?: ")
+    limpar_terminal()
+    if saida.lower() == "s" :
+        break
 
 '''
 n = int(input("Digite o número de arestas:"))
