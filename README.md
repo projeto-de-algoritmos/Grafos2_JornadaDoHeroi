@@ -1,21 +1,9 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
 
-# NomedoProjeto
+# A jornada do herói
 
 **Número da Lista**: 2<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Conteúdo da Disciplina**: algoritmo de Dijsktra<br>
 
 ## Alunos
 |Matrícula | Aluno |
@@ -23,21 +11,16 @@ Temas:
 | 19/0032821  |  Lorenzo de Lima Alves dos Santos |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
-
+Este projeto é um simulador de uma jornada que um herói tem onde ele escolhe por onde começar e aonde ele quer chegar.
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Python<br>
+É necessário ter o Python 3 instalado em seu sistema. Você pode fazer o download da versão mais recente do Python em python.org.
 
 ## Uso 
 Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
 
 
 
