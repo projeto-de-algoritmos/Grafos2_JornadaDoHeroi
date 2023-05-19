@@ -17,7 +17,7 @@ def show_window(image_path, exit_event):
 
     # Cria a janela
     window = pygame.display.set_mode((image_width, image_height))
-    pygame.display.set_caption("Janela da Imagem")
+    pygame.display.set_caption("Jornada do Herói")
 
     # Carrega a imagem no formato do Pygame
     pygame_image = pygame.image.load(image_path)
@@ -65,37 +65,43 @@ limpar_terminal()
 
 grafo = Grafo()
 
-grafo.adicionar_aresta('Eldoria', 'Drakonheim', 13)
-grafo.adicionar_aresta('Eldoria', 'Mythosia', 25)
-grafo.adicionar_aresta('Mythosia', 'Eldoria', 25)
-grafo.adicionar_aresta('Mythosia', 'Avaloria', 30)
-grafo.adicionar_aresta('Avaloria', 'Mythosia', 30)
-grafo.adicionar_aresta('Avaloria', 'Vale Verdejante', 9)
-grafo.adicionar_aresta('Avaloria', 'Stormgate', 9)
-grafo.adicionar_aresta('Serendell', 'Drakonheim', 4.5)
-grafo.adicionar_aresta('Drakonheim', 'Serendell', 4.5)
-grafo.adicionar_aresta('Drakonheim', 'Celestia', 7)
-grafo.adicionar_aresta('Drakonheim', 'Eldoria', 13)
-grafo.adicionar_aresta('Sylvanor', 'Frostholm', 5)
-grafo.adicionar_aresta('Frostholm', 'Sylvanor', 5)
-grafo.adicionar_aresta('Celestia', 'Vale Verdejante', 9)
-grafo.adicionar_aresta('Celestia', 'Shadowfen', 4)
-grafo.adicionar_aresta('Celestia', 'Drakonheim', 7)
-grafo.adicionar_aresta('Celestia', 'Ironhold', 8)
-grafo.adicionar_aresta('Shadowfen', 'Celestia', 4)
-grafo.adicionar_aresta('Crystalis', 'Stormgate', 5.5)
-grafo.adicionar_aresta('Crystalis', 'Emberfall', 2)
-grafo.adicionar_aresta('Crystalis', 'Stormgate', 6)
-grafo.adicionar_aresta('Crystalis', 'Picos Radiantes', 5)
-grafo.adicionar_aresta('Emberfall', 'Crystalis', 2)
-grafo.adicionar_aresta('Emberfall', 'Ironhold', 12)
-grafo.adicionar_aresta('Stormgate', 'Crystalis', 5.5)
-grafo.adicionar_aresta('Stormgate', 'Avaloria', 9)
-grafo.adicionar_aresta('Picos Radiantes', 'Crystalis', 5)
-grafo.adicionar_aresta('Vale Verdejante', 'Celestia', 9)
-grafo.adicionar_aresta('Vale Verdejante', 'Avaloria', 9)
-grafo.adicionar_aresta('Ironhold', 'Emberfall', 12)
-grafo.adicionar_aresta('Ironhold', 'Celestia', 8)
+
+grafo.adicionar_aresta("Eldoria", "Drakonheim", 13)
+grafo.adicionar_aresta("Eldoria", "Mythosia", 25)
+grafo.adicionar_aresta("Mythosia", "Eldoria", 25)
+grafo.adicionar_aresta("Mythosia", "Avaloria", 30)
+grafo.adicionar_aresta("Avaloria", "Mythosia", 30)
+grafo.adicionar_aresta("Avaloria", "Vale Verdejante", 9)
+grafo.adicionar_aresta("Avaloria", "Stormgate", 9)
+grafo.adicionar_aresta("Serendell", "Drakonheim", 4.5)
+grafo.adicionar_aresta("Drakonheim", "Serendell", 4.5)
+grafo.adicionar_aresta("Drakonheim", "Celestia", 7)
+grafo.adicionar_aresta("Drakonheim", "Eldoria", 13)
+grafo.adicionar_aresta("Sylvanor", "Frostholm", 5)
+grafo.adicionar_aresta("Frostholm", "Sylvanor", 5)
+grafo.adicionar_aresta("Celestia", "Vale Verdejante", 9)
+grafo.adicionar_aresta("Celestia", "Shadowfen", 4)
+grafo.adicionar_aresta("Celestia", "Drakonheim", 7)
+grafo.adicionar_aresta("Celestia", "Ironhold", 8)
+grafo.adicionar_aresta("Shadowfen", "Celestia", 4)
+grafo.adicionar_aresta("Shadowfen", "Celestia", 4)
+grafo.adicionar_aresta("Crystalis", "Stormgate", 5.5)
+grafo.adicionar_aresta("Crystalis", "Emberfall", 2)
+grafo.adicionar_aresta("Crystalis", "Picos Radiantes", 6)
+grafo.adicionar_aresta("Crystalis", "Pinheiros Sussurrantes", 5)
+grafo.adicionar_aresta("Emberfall", "Crystalis", 2)
+grafo.adicionar_aresta("Emberfall", "Ironhold", 12)
+grafo.adicionar_aresta("Stormgate", "Crystalis", 5.5)
+grafo.adicionar_aresta("Stormgate", "Avaloria", 9)
+grafo.adicionar_aresta("Picos Radiantes", "Crystalis", 5)
+grafo.adicionar_aresta("Vale Verdejante", "Avaloria", 9)
+grafo.adicionar_aresta("Vale Verdejante", "Celestia", 9)
+grafo.adicionar_aresta("Ironhold", "Celestia", 8)
+grafo.adicionar_aresta("Ironhold", "Celestia", 8)
+grafo.adicionar_aresta("Ironhold", "Emberfall", 12)
+grafo.adicionar_aresta("Pinheiros Sussurrantes", "Crystalis", 6)
+
+
 
 local_atual = 'Celestia'
 
@@ -121,7 +127,6 @@ while True:
     else:
         local_atual = vertice_final
         caminho_formatado = ' -> '.join(caminho)
-        print(caminho_formatado)
         print(f"\n-->A menor distância entre {local_atual} e {vertice_final} é: {menor_distancia}Km. O caminho é {caminho_formatado}. Vamos lá!")
         
 

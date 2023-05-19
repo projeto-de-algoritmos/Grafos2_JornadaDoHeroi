@@ -7,10 +7,7 @@ class Grafo:
     def adicionar_aresta(self, u, v, peso):
         if u not in self.graph:
             self.graph[u] = []
-        if v not in self.graph:
-            self.graph[v] = []
         self.graph[u].append((v, peso))
-        self.graph[v].append((u, peso))
 
     def dijkstra(self, vertice_inicial, vertice_final):
         distancias = {vertice: float('inf') for vertice in self.graph}
