@@ -31,4 +31,4 @@ class Grafo:
                     heapq.heappush(heap, (distancia, vizinho))
                     caminho[vizinho] = caminho[vertice_atual] + [vizinho]
 
-        return float('inf'), caminho[vertice_final]
+        return float('inf'), []
