@@ -30,5 +30,5 @@ Alem disso é necessário instalar as bibliotecas PIL e Pygame com os comandos:
 ## Uso 
 A ideia é que você tem acesso a janela do mapa do mundo com as regiões numeradas de 1 a 16 e você deve escolher no terminal da sua IDE (VS code recomendado) por onde começar e onde quer chegar. O programa mostra por quais lugares passar e qual a distância total do trajeto.
 
-
-
+## Vídeo
+O vídeo infelizmente ficou maior que 10MB, mas pode ser visto no link: https://youtu.be/2hss-dUePNw
