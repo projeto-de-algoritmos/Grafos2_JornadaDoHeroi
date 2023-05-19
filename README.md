@@ -23,6 +23,7 @@ Este projeto é um simulador de uma jornada que um herói tem onde ele escolhe p
 Alem disso é necessário instalar as bibliotecas PIL e Pygame com os comandos: 
 
 ->pip install pygame
+
 ->pip install Pillow
 
 ## Uso 
