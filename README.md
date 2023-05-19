@@ -14,11 +14,12 @@
 Este projeto é um simulador de uma jornada que um herói tem onde ele escolhe por onde começar e aonde ele quer chegar.
 ## Screenshots
 ![tela1](https://github.com/projeto-de-algoritmos/Grafos2_JornadaDoHeroi/assets/54644579/22fb9894-25c2-4658-885d-b92c39f40a45)
-![tela2](https://github.com/projeto-de-algoritmos/Grafos2_JornadaDoHeroi/assets/54644579/e4df7590-4f91-4883-8ba7-9fe6fa81a66b)
-![tela3](https://github.com/projeto-de-algoritmos/Grafos2_JornadaDoHeroi/assets/54644579/f8da2874-dbbf-4456-b389-2f09e55250f5)
+![tela2](https://github.com/projeto-de-algoritmos/Grafos2_JornadaDoHeroi/assets/54644579/9250c302-c230-4d2b-b362-b0ceeab84079)
+![tela3](https://github.com/projeto-de-algoritmos/Grafos2_JornadaDoHeroi/assets/54644579/08bd3a0d-21a2-4c99-b451-af6fef619264)
 
 ## Instalação 
-**Linguagem**: Python<br>
+**Linguagem**
+: Python<br>
 É necessário ter o Python 3 instalado em seu sistema. Você pode fazer o download da versão mais recente do Python em python.org.
 Alem disso é necessário instalar as bibliotecas PIL e Pygame com os comandos: 
 
